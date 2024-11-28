@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+    <title>Log In ~~ Sign Up</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="circle">
+
+    </div>
+
+    <header>
+        <a href = "starbucks.html"><img src = "images/logo.png" class = "logo"></a>
+        <ul>
+            <li><a href = "starbucks.html">Home</a></li>
+            <li><a href = "https://www.starbucks.com/menu">Menu</a></li>
+            <li><a href = "#">What's New</a></li>
+            <li><a href = "checkout.html">Checkout</a></li>
+            <li><a href = "#">Contact</a></li>
+            <li><a href = "form.html">Log In ~~ Sign Up</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="blueBg">
+            <div class="box signin">
+                <h2>Already Have an Account ?</h2>
+                <button class="signinBtn">Sign In</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't Have an Account ?</h2>
+                <button class="signupBtn">Sign Up</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form signinForm">
+                <form>
+                    <h3>Sign In</h3>
+                    <input type = "text" placeholder = "Username">
+                    <input type = "password" placeholder = "Password">
+                    <input type = "submit" value = "Login">
+                    <a href = "#" class = "forgot">Forgot Password</a>
+                </form>
+            </div>
+            
+            <div class="form signupForm">
+                <form>
+                    <h3>Sign Up</h3>
+                    <input type = "text" placeholder = "Username">
+                    <input type = "text" placeholder = "Email Address">
+                    <input type = "password" placeholder = "Password">
+                    <input type = "password" placeholder = "Confirm Password">
+                    <input type = "submit" value = "Register">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signinBtn = document.querySelector('.signinBtn');
+        const signupBtn = document.querySelector('.signupBtn');
+        const formBx = document.querySelector('.formBx');
+        const body = document.querySelector('body');
+
+        signupBtn.onclick = function(){
+            formBx.classList.add('active')
+            body.classList.add('active')
+        }
+
+        signinBtn.onclick = function(){
+            formBx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

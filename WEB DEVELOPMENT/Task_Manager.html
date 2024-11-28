@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .task {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .task h2 {
+        margin-top: 0;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+        margin-bottom: 10px;
+    }
+
+    nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Moderatrix_dasboard.html"> Project Management Dashboard </a></li>
+        </ul>
+        <ul>
+            <li><a href="Log in -- Sign Up.html"><i class="fas fa-sign-out-alt icon"></i> Log Out</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+
+    <main>
+        <section id="task-form">
+            <!-- Task creation form -->
+        </section>
+
+        <section id="task-list">
+            <!-- Task list -->
+        </section>
+    </main>
+
+    <script src="Task_Manager.js"></script>
+</body>
+</html>

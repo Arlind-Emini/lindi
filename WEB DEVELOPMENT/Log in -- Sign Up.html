@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up Form</title>
+    <link rel="stylesheet" href="Moderatrix_main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .form-container button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-button {
+            background: none;
+            border: none;
+            color: #007BFF;
+            cursor: pointer;
+            text-decoration: underline;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container" id="form-container">
+    <h2 id="form-title">Login</h2>
+    <div id="login-form">
+        <select id="role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <button class="toggle-button" onclick="toggleForm()">Don't have an account? Sign Up</button>
+    </div>
+    <div id="signup-form" style="display: none;">
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button onclick="signup()">Sign Up</button>
+        <button class="toggle-button" onclick="toggleForm()">Already have an account? Login</button>
+    </div>
+</div>
+
+<script>
+    function toggleForm() {
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const formTitle = document.getElementById('form-title');
+        
+        if (loginForm.style.display === 'none') {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            formTitle.innerText = 'Login';
+        } else {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            formTitle.innerText = 'Sign Up';
+        }
+    }
+
+    function login() {
+        const role = document.getElementById('role').value;
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+
+        // Here you would typically send this data to your server for verification
+        console.log(`Logging in as ${role}:`, { email, password });
+
+        // Mock login process
+        alert(`Logged in as ${role}!`);
+    }
+
+    function signup() {
+        const username = document.getElementById('signup-username').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+
+        // Here you would typically send this data to your server for creating a new user
+        console.log('Signing up:', { username, email, password });
+
+        // Mock sign up process
+        alert('Signed up successfully!');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Client Dashboard Styles */
+#client-dashboard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Task Management Styles */
+#task-management {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+</style>
+<body>
+<nav>
+    <ul>
+        <li><a href="Task_Manager.html"> Task Manager </a></li>
+    </ul>
+    <ul>
+        <li><a href="Moderatrix_main.html"><i class="fas fa-sign-out-alt icon"></i> Log Out</a></li>
+    </ul>
+</nav>
+    <header>
+        <h1>Project Management Dashboard</h1>
+    </header>
+    <main>
+        <section id="client-dashboard">
+            <!-- Client project dashboard will be dynamically generated here -->
+        </section>
+        <section id="task-management">
+            <!-- Task management interface will be dynamically generated here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Management Dashboard. All rights reserved.</p>
+    </footer>
+    <script src="Moderatri_dashboard.js"></script>
+</body>
+</html>

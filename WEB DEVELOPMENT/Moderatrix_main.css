@@ -1,0 +1,18 @@
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container select,
+.form-container button {
+    width: calc(100% - 20px); /* Adjusted width to accommodate border */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Added border */
+    border-radius: 4px; /* Added border radius */
+}
+
+.form-container input#signup-username {
+    width: calc(100% - 20px); /* Adjusted width to accommodate border */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Added border */
+    border-radius: 4px; /* Added border radius */
+}
